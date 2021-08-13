@@ -48,6 +48,13 @@ class ContactController extends Controller
         //
     }
 
+    public function add(Request $request)
+    {
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $message = $request->input('message');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

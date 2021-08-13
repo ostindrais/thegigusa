@@ -13,41 +13,10 @@
                 </div>
             </div>
             <div class="container">
-            <div id="home-carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#home-carousel" data-slide-to="1"></li>
-                    <li data-target="#home-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/images/home1.png" style="height:600px;object-fit:cover;" class="d-block w-100" alt="Excitement">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>Remember the excitement of attending live events?</h1>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/home2.png" style="height:600px;object-fit:cover;" class="d-block w-100" alt="Virtual">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>We're bringing it back — virtually.</h1>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/home3.png" style="height:600px;object-fit:cover;" class="d-block w-100" alt="Artists">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>Audiences & fans can interact with artists, and so much more!</h1>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#home-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#home-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+                <!-- The HTML5 video element that will create the background video on the header -->
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <source src="/video/promo.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </div>

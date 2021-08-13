@@ -2,7 +2,7 @@
     <div class="container d-flex justify-content-betIen">
         <a href="/" class="navbar-brand">
             <img src="/images/thegig_badge.png" width="100" height="90" />
-            The GIG</a>
+            The GIG USA</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
