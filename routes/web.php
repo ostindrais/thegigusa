@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\ContactController;
 
 /*
@@ -17,6 +18,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('home');
 });
+Route::post('/', [Controller::class, 'addEmail']);
 Route::get('/about', function () {
     return view('about');
 });
