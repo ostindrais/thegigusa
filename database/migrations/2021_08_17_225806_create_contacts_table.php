@@ -20,6 +20,7 @@ class CreateContactsTable extends Migration
             $table->enum('contactType', ['artist','sponsor','promoter','fan']);
             $table->boolean('vip');
             $table->boolean('emailIsVerified');
+            $table->boolean('subscribed');
             $table->text('comments');
             $table->timestamps();
         });

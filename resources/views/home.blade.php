@@ -5,6 +5,21 @@ $random = rand(0, 3);
 $promoNames = ['drum','flag','orb','splash'];
 $filename = $promoNames[$random] . '_promo.mp4'
 ?>
+@if (session('emailUnsubscribed'))
+    <div class="alert alert-success">Your email address has been unsubscribed.</div>
+@endif
+@if (session('emailVerified'))
+    <div class="alert alert-success">Your email address has been verified.</div>
+@endif
+@if (session('contactExists'))
+    <div class="alert alert-success">That email address has already been added.</div>
+@endif
+@if (session('contactDoesNotExist'))
+    <div class="alert alert-success">That email address has not already been added.</div>
+@endif
+@if (session('contactAdded'))
+    <div class="alert alert-success">Your email address has been added to our list. Check your email for a welcome message from us!</div>
+@endif
     <div class="container">
         <!-- The HTML5 video element that will create the background video on the header -->
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">

@@ -26,4 +26,5 @@ Route::get('/contact', function () {
     return view('contacts');
 });
 Route::post('/contact', [ContactController::class, 'add']);
-
+Route::get('/unsubscribe', [Controller::class, 'unsubscribeEmail']);
+Route::get('/verify', [Controller::class, 'verifyEmail']);
