@@ -1,9 +1,7 @@
 @extends('layout.mainlayout')
 @section('content')
 <?php
-$random = rand(0, 3);
-$promoNames = ['drum','flag','orb','splash'];
-$filename = $promoNames[$random] . '_promo.mp4'
+$filename = 'flag_promo.mp4'
 ?>
 @if (session('emailUnsubscribed'))
     <div class="alert alert-success">Your email address has been unsubscribed.</div>
