@@ -19,7 +19,7 @@
                             Name
                         </div>
                         <div class="col-11">
-                            <input class="form-control" type="text" name="name" placeholder="Eddie Vedder" />
+                            <input class="form-control" type="text" name="name" />
                         </div>
                     </div>
                     <div class="row">
@@ -27,7 +27,7 @@
                             Email
                         </div>
                         <div class="col-11">
-                            <input class="form-control" type="text" name="email" placeholder="eddie@pearljam.com" />
+                            <input class="form-control" type="text" name="email" />
                         </div>
                     </div>
                     <div class="row">
@@ -35,12 +35,7 @@
                             Message
                         </div>
                         <div class="col-11">
-                            <textarea class="form-control" rows="15" name="message" placeholder="With the lights out, it's less dangerous
-Here we are now, entertain us
-I feel stupid and contagious
-Here we are now, entertain us
-A mulatto, an albino, a mosquito, my libido
-Yeah, hey"></textarea>
+                            <textarea class="form-control" rows="15" name="message"></textarea>
                         </div>
                     </div>
                     <div class="row">

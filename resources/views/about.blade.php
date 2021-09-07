@@ -4,8 +4,7 @@
     <div class="row">
         <div class="col-8">
             <h1>About The GIG</h1>
-            <p>The GIG is a creation and production of Invisual Digital™, a Trade Mark of Video Arts Systems &amp; Technology, Inc., a New Jersey based corporation.
-                It is a program dedicated to featuring independent musicians, bands and singer/songwriters. Each episode of The GIG will feature these artists
+            <p>The GIG is a program dedicated to featuring independent musicians, bands and singer/songwriters. Each episode of The GIG will feature these artists
                 performing in a concert or an informally staged setting, depending upon the artists. In addition, they will also be interviewed, for and by the
                 audience and their fans, providing them insights into the artists' music, their lives, and their personalities. They will interact with their
                 audience before, during and after the performance segments of the show through an active and engaging online component.
