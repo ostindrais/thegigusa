@@ -24,6 +24,22 @@ $filename = 'flag_promo.mp4'
             <source src="/video/<?= $filename ?>" type="video/mp4">
         </video>
     </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-6">
+                    <img src="/images/thegig_red.png" width="500" />
+                </div>
+                <div class="col-6 align-self-center">
+                    <h1>Become a VIP Fan</h1>
+                    <p>Click the button below to request a spot on our exclusive fan VIP list. Receive alerts, show invites and other exclusive info.</p>
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#vipModal">I'm a fan, put me on the list!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="jumbotron">
         <div class="container">
             <!-- The HTML5 video element that will create the background video on the header -->
@@ -38,37 +54,20 @@ $filename = 'flag_promo.mp4'
             <div class="col-6 align-self-center">
                 <h1>Become Involved</h1>
                 <ul>
-                    <li>Want to sponsor?</li>
-                    <li>Promote your brand?</li>
-                    <li>Showcase your talent?</li>
+                    <li>Are you an artist who wants to audition for The GIG?</li>
+                    <li>Are you a sponsor or advertiser that wants to reach our audience?</li>
                 </ul>
                 <p>
                     Click the button below to send us an email.
                     Tell us your interest so we can route it to the right place,
                     and we'll get back to you quickly.
                 </p>
-                <button class="btn btn-secondary" data-toggle="modal" data-target="#partnerModal">I Want to Help!</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#partnerModal">Sign me up!</button>
             </div>
             <div class="col-6">
                 <img src="/images/thegig_reporter.png" width="600" />
             </div>
         </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-6">
-                        <img src="/images/thegig_red.png" width="500" />
-                    </div>
-                    <div class="col-6 align-self-center">
-                        <h1>Become a VIP</h1>
-                        <p>Click the button below to request a spot on our exclusive VIP list. Receive alerts, show invites and other exclusive info.</p>
-                        <button class="btn btn-secondary" data-toggle="modal" data-target="#vipModal">Sign Me Up!</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <div class="jumbotron">
@@ -93,8 +92,8 @@ $filename = 'flag_promo.mp4'
                         <select class="form-control" name="contactType" id="partnerContactType">
                             <option value="">A Human</option>
                             <option value="fan">A Fan</option>
-                            <option value="artist">An Artist</option>
-                            <option value="sponsor">A Sponsor</option>
+                            <option value="artist">A Performing Artist</option>
+                            <option value="sponsor">A Sponsor/Advertiser</option>
                             <option value="promoter">A Promoter</option>
                         </select>
                     </div>
@@ -132,16 +131,6 @@ $filename = 'flag_promo.mp4'
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
-                        <label for="vipContactType">I am</label>
-                        <select class="form-control" name="contactType" id="vipContactType">
-                            <option value="">A Human</option>
-                            <option value="fan">A Fan</option>
-                            <option value="artist">An Artist</option>
-                            <option value="sponsor">A Sponsor</option>
-                            <option value="promoter">A Promoter</option>
-                        </select>
-                    </div>
                     <div class="form-group">
                         <label for="vipName">Your Name</label>
                         <input type="text" id="vipName" class="form-control" name="name" />
