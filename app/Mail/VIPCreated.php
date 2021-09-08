@@ -14,6 +14,7 @@ class VIPCreated extends Mailable
 
     public $contact;
     public $url;
+    public $hideFooterNavigation;
 
     /**
      * Create a new message instance.
@@ -24,6 +25,7 @@ class VIPCreated extends Mailable
     {
         $this->contact = $contact;
         $this->url = env('APP_URL');
+        $this->hideFooterNavigation = true;
     }
 
 

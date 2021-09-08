@@ -1,5 +1,15 @@
 @extends('layout.mainlayout')
 @section('content')
+<style>
+    .vipBadge {
+        width: 20vw;
+        align-content: center;
+    }
+    .vipText {
+        width: 40vw;
+        vertical-align: middle;
+    }
+</style>
 <?php
 $filename = 'flag_promo.mp4'
 ?>
@@ -28,14 +38,16 @@ $filename = 'flag_promo.mp4'
     <div class="row">
         <div class="col-12">
             <div class="row">
-                <div class="col-6">
-                    <img src="/images/thegig_red.png" width="500" />
+                <div class="col-1">&nbsp;</div>
+                <div class="col-5">
+                    <img src="/images/thegig_red.png" class="vipBadge" />
                 </div>
-                <div class="col-6 align-self-center">
+                <div class="col-5 vipText">
                     <h1>Become a VIP Fan</h1>
                     <p>Click the button below to request a spot on our exclusive fan VIP list. Receive alerts, show invites and other exclusive info.</p>
                     <button class="btn btn-secondary" data-toggle="modal" data-target="#vipModal">I'm a fan, put me on the list!</button>
                 </div>
+                <div class="col-1">&nbsp;</div>
             </div>
         </div>
     </div>
@@ -48,7 +60,7 @@ $filename = 'flag_promo.mp4'
             </video>
         </div>
     </div>
-    <div class="jumbotron home-banner">
+    <div class="home-banner">
         <div class="container">
         <div class="row">
             <div class="col-6 align-self-center">
@@ -70,9 +82,11 @@ $filename = 'flag_promo.mp4'
         </div>
         </div>
     </div>
-    <div class="jumbotron">
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/PLafL99ejFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PLafL99ejFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
     <div class="modal fade" id="partnerModal" tabindex="-1" aria-labelledby="partnerModalLabel" aria-hidden="true">

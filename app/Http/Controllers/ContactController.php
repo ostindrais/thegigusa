@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMessageCreated;
+use App\Mail\NotifyContactMessageCreated;
+use App\Models\ContactMessage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -50,9 +54,16 @@ class ContactController extends Controller
 
     public function add(Request $request)
     {
-        $name = $request->input('name');
-        $email = $request->input('email');
-        $message = $request->input('message');
+        $contactMessage = new ContactMessage;
+        $contactMessage->name = $request->name;
+        $contactMessage->email = $request->email;
+        $contactMessage->message = $request->message;
+        $contactMessage->save();
+        $notifyEmail = new NotifyContactMessageCreated($contactMessage);
+        $createdEmail = new ContactMessageCreated($contactMessage);
+        Mail::to($contactMessage->email)->send($createdEmail);
+        Mail::to(self::NOTIFY_EMAIL_ADDRESS)->send($notifyEmail);
+        return redirect('/contact')->with('messageSent', 1);
     }
 
     /**

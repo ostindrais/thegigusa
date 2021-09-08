@@ -6,26 +6,26 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Contact;
+use App\Models\ContactMessage;
 
-class ContactCreated extends Mailable
+class NotifyContactMessageCreated extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $contact;
-    public $hideFooterNavigation;
+    public $contactMessage;
     public $url;
+    public $hideFooterNavigation;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Contact $contact)
+    public function __construct(ContactMessage $message)
     {
-        $this->contact = $contact;
-        $this->hideFooterNavigation = true;
+        $this->contactMessage = $message;
         $this->url = env('APP_URL');
+        $this->hideFooterNavigation = true;
     }
 
     /**
@@ -35,7 +35,7 @@ class ContactCreated extends Mailable
      */
     public function build()
     {
-        $this->subject("Welcome to The GIG USA!");
-        return $this->view('emails.newContact');
+        $this->subject("New The GIG USA Contact Message");
+        return $this->view('emails.notifyContactMessage');
     }
 }
