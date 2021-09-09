@@ -23,10 +23,6 @@ class Controller extends BaseController
     public function addEmail(Request $request)
     {
         $thisContact = new Contact;
-        $foundContact = Contact::where('email', $request->email)->first();
-        if (!is_null($foundContact)) {
-            return redirect('/')->with('contactExists', 1);
-        }
         $thisContact->name = $request->name;
         $thisContact->email = $request->email;
         $thisContact->contactType = $request->contactType;
@@ -39,6 +35,13 @@ class Controller extends BaseController
         }
         $thisContact->comments = $request->comments;
         $thisContact->subscribed = 1;
+        $foundContact = Contact::where('email', $thisContact->email)
+            ->where('contactType', $thisContact->contactType)
+            ->where('vip', $thisContact->vip)
+            ->first();
+        if (!is_null($foundContact)) {
+            return redirect('/')->with('contactExists', 1);
+        }
         $thisContact->save();
         $createdEmail = new VIPCreated($thisContact);
         $notifyEmail = new NotifyVIPCreated($thisContact);

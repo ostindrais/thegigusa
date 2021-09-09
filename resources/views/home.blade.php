@@ -44,8 +44,8 @@ $filename = 'flag_promo.mp4'
                 </div>
                 <div class="col-5 vipText">
                     <h1>Become a VIP Fan</h1>
-                    <p>Click the button below to request a spot on our exclusive fan VIP list. Receive alerts, show invites and other exclusive info.</p>
-                    <button class="btn btn-secondary" data-toggle="modal" data-target="#vipModal">I'm a fan, put me on the list!</button>
+                    <p>I'm a FAN, please put me on the VIP list! Receive alerts, show invites and other exclusive info.</p>
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#vipModal">Put me on the list!</button>
                 </div>
                 <div class="col-1">&nbsp;</div>
             </div>
@@ -126,7 +126,7 @@ $filename = 'flag_promo.mp4'
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Never Mind</button>
-                    <input type="submit" class="btn btn-primary" value="I Can Help" />
+                    <input type="submit" class="btn btn-primary" value="Sign Me Up" />
                 </div>
                 </form>
             </div>
