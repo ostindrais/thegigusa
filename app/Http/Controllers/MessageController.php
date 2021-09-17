@@ -7,8 +7,9 @@ use App\Mail\NotifyContactMessageCreated;
 use App\Models\ContactMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\View;
 
-class ContactController extends Controller
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +18,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $messages = ContactMessage::all();
+        return View::make('messages', ['messages' => $messages]);
     }
 
     /**

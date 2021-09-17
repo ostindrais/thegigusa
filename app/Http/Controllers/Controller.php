@@ -13,6 +13,7 @@ use App\Mail\NotifyContactCreated;
 use App\Mail\VIPCreated;
 use App\Mail\NotifyVIPCreated;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\View;
 
 class Controller extends BaseController
 {
@@ -76,5 +77,11 @@ class Controller extends BaseController
         $foundContact->emailIsVerified = 1;
         $foundContact->save();
         return redirect('/')->with('emailVerified', 1);
+    }
+
+    public function view(Request $request)
+    {
+        $allContacts = Contact::all();
+        return View::make('contacts.view', ['contacts' => $allContacts]);
     }
 }

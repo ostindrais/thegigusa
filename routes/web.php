@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +25,8 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contacts');
 });
-Route::post('/contact', [ContactController::class, 'add']);
+Route::post('/contact', [MessageController::class, 'add']);
+Route::get('/contacts/view', [Controller::class, 'view']);
+Route::get('/messages/view', [MessageController::class, 'index']);
 Route::get('/unsubscribe', [Controller::class, 'unsubscribeEmail']);
 Route::get('/verify', [Controller::class, 'verifyEmail']);
