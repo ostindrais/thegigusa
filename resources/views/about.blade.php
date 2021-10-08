@@ -15,11 +15,10 @@
                 audiences enjoyed throughout the decades. Programs such as these don’t exist today, and The GIG will pick up that mantle, updated and
                 unique to its own flavor and design.
             </p>
-            <p>But here’s the best part that promises to be the most dynamic aspect of its concept. Rather than being available to audiences on one specific
-                TV channel or cable network, one day a week at a specific time only, through the technology available today, it will be available on premium
-                streaming outlets such as Roku, Fire TV, and Apple TV, simultaneously. This will allow the broadest amount of exposure because each program
-                will ‘live’ on its own channel within the line-up of these streaming platforms and each one will be available on-demand (VOD) with long-tail
-                persistence.
+            <p>Using today’s online technology, The GIG will be a hybrid live/streaming venue with original and entertaining content for audiences world-wide.
+                Rather than being available to audiences on one specific TV channel or cable network, one day a week at a specific time only,
+                through the technology available today, it will be available on premium streaming outlets (TBA). This will allow the broadest amount of
+                exposure available in premier showing formats and on-demand with long-tail persistence.
             </p>
         </div>
         <div class="col-4">
