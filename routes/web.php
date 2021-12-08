@@ -33,6 +33,8 @@ Route::get('/contact', function () {
 });
 Route::post('/contact', [MessageController::class, 'add']);
 Route::get('/contacts/view', [Controller::class, 'view'])->middleware('auth');
+Route::post('/contacts/view', [Controller::class, 'markSpam'])->middleware('auth');
 Route::get('/messages/view', [MessageController::class, 'index'])->middleware('auth')->name('messages');
+Route::post('/messages/view', [MessageController::class, 'markSpam'])->middleware('auth');
 Route::get('/unsubscribe', [Controller::class, 'unsubscribeEmail']);
 Route::get('/verify', [Controller::class, 'verifyEmail']);

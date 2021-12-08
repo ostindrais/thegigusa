@@ -18,7 +18,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = ContactMessage::all();
+        $messages = ContactMessage::where('isSpam', 0)->get();
         return View::make('messages', ['messages' => $messages]);
     }
 
@@ -66,6 +66,20 @@ class MessageController extends Controller
         Mail::to($contactMessage->email)->send($createdEmail);
         Mail::to(self::NOTIFY_EMAIL_ADDRESS)->send($notifyEmail);
         return redirect('/contact')->with('messageSent', 1);
+    }
+
+    public function markSpam(Request $request)
+    {
+        $spam = $request->isSpam;
+        foreach ($spam as $key => $spamID) {
+            $foundMessage = ContactMessage::where('id', $key)->first();
+            if (is_null($foundMessage)) {
+                return redirect('/')->with('contactDoesNotExist', 1);
+            }
+            $foundMessage->isSpam = 1;
+            $foundMessage->save();
+        }
+        return redirect('/messages/view');
     }
 
     /**

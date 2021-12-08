@@ -81,7 +81,21 @@ class Controller extends BaseController
 
     public function view(Request $request)
     {
-        $allContacts = Contact::all();
+        $allContacts = Contact::where('isSpam', 0)->get();
         return View::make('contacts.view', ['contacts' => $allContacts]);
+    }
+
+    public function markSpam(Request $request)
+    {
+        $spam = $request->isSpam;
+        foreach ($spam as $key => $spamID) {
+            $foundContact = Contact::where('id', $key)->first();
+            if (is_null($foundContact)) {
+                return redirect('/')->with('contactDoesNotExist', 1);
+            }
+            $foundContact->isSpam = 1;
+            $foundContact->save();
+        }
+        return redirect('/contacts/view');
     }
 }

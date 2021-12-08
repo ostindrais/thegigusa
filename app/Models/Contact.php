@@ -12,6 +12,7 @@ class Contact extends Model
     protected $attributes = [
         'contactType' => 'fan',
         'vip' => 0,
-        'emailIsVerified' => 0
+        'emailIsVerified' => 0,
+        'isSpam' => 0
     ];
 }
